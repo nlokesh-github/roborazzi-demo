@@ -24,8 +24,7 @@ steps:
     testResultsFiles: '**/TEST-*.xml'
     tasks: 'assembleDebug testDebugUnitTest'
 - task: CopyFiles@2
-    inputs:
-      SourceFolder: $(System.DefaultWorkingDirectory)/app/build/outputs/roborazzi/
-      TargetFolder: $(Build.ArtifactStagingDirectory)/Snapshots
+  inputs:
+    SourceFolder: $(System.DefaultWorkingDirectory)/app/build/outputs/roborazzi/
+    TargetFolder: $(Build.ArtifactStagingDirectory)/Snapshots
 - task: PublishBuildArtifacts@1
-
