@@ -23,5 +23,9 @@ steps:
     publishJUnitResults: false
     testResultsFiles: '**/TEST-*.xml'
     tasks: 'assembleDebug testDebugUnitTest'
+- task: CopyFiles@2
+    inputs:
+      SourceFolder: apps/build/outputs/roborazzi/
+      TargetFolder: $(Build.ArtifactStagingDirectory)/Snapshots
 - task: PublishBuildArtifacts@1
 
